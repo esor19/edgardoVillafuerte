@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<style>
+		.table-labels td, .table-inputs td {
+			padding: 5px 10px;
+			vertical-align: top;
+		}
+		.table-labels {
+			text-align: right;
+		}
+		.table-inputs input {
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body style="background-color: goldenrod" align="left">
+	<h1><font color="blue" face="Tahoma" size="40px">REGISTRATION FORM</font></h1>
+	<h2><font color="green" face="Verdana" size="25px">
+	
+	<table>
+	<tr>
+		<td>
+			<table class="table-labels">
+				<tr><td><label>FIRST NAME</label></td></tr>
+				<tr><td><label>MIDDLE NAME</label></td></tr>
+				<tr><td><label>LAST NAME</label></td></tr>
+				<tr><td><label>SUFFIX</label></td></tr>
+				<tr><td><label>COUNTRY</label></td></tr>
+				<tr><td><label>PROVINCE</label></td></tr>
+				<tr><td><label>MUNICIPALITY</label></td></tr>
+				<tr><td><label>BARANGAY</label></td></tr>
+				<tr><td><label>SUBD./HOUSE #/STREET</label></td></tr>
+				<tr><td><label>BIRTHDAY</label></td></tr>
+				<tr><td><label>AGE</label></td></tr>
+			</table>
+		</td>
+		<td>
+			<table class="table-inputs">
+				<tr><td><input type="text" id="inputFname" name="FirstName" size="30" style="height:35px"/></td></tr>
+				<tr><td><input type="text" id="inputMname" name="MiddleName" size="30" style="height:30px"/></td></tr>
+				<tr><td><input type="text" id="inputLname" name="LastName" size="30" style="height:30px"/></td></tr>
+				<tr><td><input type="text" id="inputSuffix" name="Suffix" size="30" style="height:30px"/></td></tr>
+				<tr><td><input type="text" id="inputCountry" name="Country" size="30" style="height:30px"/></td></tr>
+				<tr><td><input type="text" id="inputProvince" name="Province" size="30" style="height:30px"/></td></tr>
+				<tr><td><input type="text" id="inputMunicipality" name="Municipality" size="30" style="height:30px"/></td></tr>
+				<tr><td><input type="text" id="inputBarangay" name="Barangay" size="30" style="height:30px"/></td></tr>
+				<tr><td><input type="text" id="inputShs" name="Shs" size="30" style="height:30px"/></td></tr>
+				<tr><td><input type="text" id="inputBirthday" name="Birthday" size="30" style="height:30px"/></td></tr>
+				<tr><td><input type="text" id="inputAge" name="Age" size="30" style="height:30px"/></td></tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+
+	<p>
+		<input style="background-color:red; border-color:green; color:white; font-family:Century Gothic; font-size:25px; width:250px; height:75px; text-align:center"
+			type="button" onclick="showInput()" name="submit" value="VIEW" /> 
+	</p>
+
+	<p><font color="green" face="Verdana" size="25px">
+		<label>Your Information:</label>
+	</font></p>
+	
+	<table>
+	<tr>
+		<td>
+			<table class="table-labels">
+				<tr><td><label>FIRST NAME:</label></td></tr>
+				<tr><td><label>MIDDLE NAME:</label></td></tr>
+				<tr><td><label>LAST NAME:</label></td></tr>
+				<tr><td><label>SUFFIX:</label></td></tr>
+				<tr><td><label>COUNTRY:</label></td></tr>
+				<tr><td><label>PROVINCE:</label></td></tr>
+				<tr><td><label>MUNICIPALITY:</label></td></tr>
+				<tr><td><label>BARANGAY:</label></td></tr>
+				<tr><td><label>SUBD./HOUSE #/STREET:</label></td></tr>
+				<tr><td><label>BIRTHDAY:</label></td></tr>
+				<tr><td><label>AGE:</label></td></tr>
+			</table>
+		</td>
+		<td>
+			<table class="table-inputs">
+				<tr><td><label id="showFname"> </label></td></tr>
+				<tr><td><label id="showMname"> </label></td></tr>
+				<tr><td><label id="showLname"> </label></td></tr>
+				<tr><td><label id="showSuffix"> </label></td></tr>
+				<tr><td><label id="showCountry"> </label></td></tr>
+				<tr><td><label id="showProvince"> </label></td></tr>
+				<tr><td><label id="showMunicipality"> </label></td></tr>
+				<tr><td><label id="showBarangay"> </label></td></tr>
+				<tr><td><label id="showShs"> </label></td></tr>
+				<tr><td><label id="showBirthday"> </label></td></tr>
+				<tr><td><label id="showAge"> </label></td></tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+
+	<script>
+		function showInput() {
+			let regFname = document.getElementById("showFname");
+			let regMname = document.getElementById("showMname");
+			let regLname = document.getElementById("showLname");
+			let regSuffix = document.getElementById("showSuffix");
+			let regCountry = document.getElementById("showCountry");
+			let regProvince = document.getElementById("showProvince");
+			let regMunicipality = document.getElementById("showMunicipality");
+			let regBarangay = document.getElementById("showBarangay");
+			let regShs = document.getElementById("showShs");
+			let regBirthday = document.getElementById("showBirthday");
+			let regAge = document.getElementById("showAge");
+			
+			let Fname = document.getElementById("inputFname").value;
+			let Mname = document.getElementById("inputMname").value;
+			let Lname = document.getElementById("inputLname").value;
+			let Suffix = document.getElementById("inputSuffix").value;
+			let Country = document.getElementById("inputCountry").value;
+			let Province = document.getElementById("inputProvince").value;
+			let Municipality = document.getElementById("inputMunicipality").value;
+			let Barangay = document.getElementById("inputBarangay").value;
+			let Shs = document.getElementById("inputShs").value;
+			let Birthday = document.getElementById("inputBirthday").value;
+			let Age = document.getElementById("inputAge").value;
+
+			regFname.innerHTML = Fname;
+			regMname.innerHTML = Mname;
+			regLname.innerHTML = Lname;
+			regSuffix.innerHTML = Suffix;
+			regCountry.innerHTML = Country;
+			regProvince.innerHTML = Province;
+			regMunicipality.innerHTML = Municipality;
+			regBarangay.innerHTML = Barangay;
+			regShs.innerHTML = Shs;
+			regBirthday.innerHTML = Birthday;
+			regAge.innerHTML = Age;
+		}
+	</script>
+
+	<input style="background-color:yellowgreen; border-color:green; color:white; font-family:Century Gothic; font-size:25px; width:250px; height:75px; text-align:center"
+		type="button" name="submit" value="SUBMIT" />
+
+</body>
+</html>
